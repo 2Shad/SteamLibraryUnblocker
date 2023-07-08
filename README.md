@@ -1,6 +1,6 @@
 # Steam Shared Library Unblocker
 
-The purpose of this project is to allow players to continue playing their shared library games even when the friends they are sharing from are playing games from their library. It achieves this by blocking the network connections to Steam, causing it to operate in offline mode without needing to close off all internet connections. 
+The purpose of this project is to allow players to continue playing their shared library games even when the friends they are sharing from are playing games from their library. It achieves this by blocking the network connections to Steam, causing it to operate in offline mode without needing to close off all internet connections.
 
 ⚠️ **NOTE:** This workaround will not allow the use of Steam services like multiplayer in most games that rely on Steam services for multiplayer.
 
@@ -10,6 +10,21 @@ The repository is organized as follows:
 
 - `Windows`: This Folder contains scripts for Windows systems, using the `netsh` command to manipulate Windows Firewall rules.
 - `Linux`: This Folder contains scripts for Linux systems, using the `iptables` command to manage network traffic.
+- `Systray_Application`: This Folder contains a system tray application for controlling the blocking/unblocking scripts in a more user-friendly manner.
+
+## Systray Application
+
+The system tray application provides a graphical interface for users to block/unblock network connections to Steam. The application runs in the system tray and provides menu options to block/unblock connections or exit the application.
+
+A ready-to-use executable of the systray application for Windows systems is available in the [Releases](https://github.com/2Shad/SteamLibraryUnblocker/releases) section of the project repository. Download the .exe file and run it on your machine.
+
+### Usage
+
+1. Run the Systray_Application.exe.
+2. Right-click the system tray icon to open the menu.
+3. Select 'Block' to block Steam network traffic.
+4. Select 'Unblock' to unblock Steam network traffic.
+5. To close the application, select 'Exit'.
 
 ## Windows Scripts
 
