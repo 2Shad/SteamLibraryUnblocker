@@ -8,8 +8,8 @@ The purpose of this project is to allow players to continue playing their shared
 
 The repository is organized as follows:
 
-- `/windows/`: This directory contains scripts for Windows systems, using the `netsh` command to manipulate Windows Firewall rules.
-- `/linux/`: This directory contains scripts for Linux systems, using the `iptables` command to manage network traffic.
+- `Windows`: This Folder contains scripts for Windows systems, using the `netsh` command to manipulate Windows Firewall rules.
+- `Linux`: This Folder contains scripts for Linux systems, using the `iptables` command to manage network traffic.
 
 ## Windows Scripts
 
