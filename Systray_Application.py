@@ -15,10 +15,13 @@ def check_rule():
     except CalledProcessError:
         return False
 
-# Actions for menu items
 def action_block(icon, item):
     call('block_steam_traffic.bat', shell=True)
     threading.Thread(target=update_icon_with_image, args=(icon, 'blocked_icon.png')).start()
+
+def action_block_exit(icon, item):
+    call('block_steam_traffic.bat', shell=True)
+    icon.stop()
 
 def action_unblock(icon, item):
     call('unblock_steam_traffic.bat', shell=True)
@@ -41,17 +44,16 @@ def menu_items():
     else:
         return (pystray.MenuItem('Block', action_block),
                 pystray.Menu.SEPARATOR,
+                pystray.MenuItem('Block and Exit', action_block_exit),
                 pystray.MenuItem('Exit', exit_action),)
 
 def update_icon_with_image(icon, image_path):
-    time.sleep(1)  # wait for the rule to be added/removed
-    status = check_rule()
+    time.sleep(1)
     icon.stop()
     image = Image.open(image_path)
     icon = pystray.Icon("Steam Status", icon=image, menu=menu_items())
     icon.run()
 
-# Create systray icon
 status = check_rule()
 if status:
     icon = pystray.Icon("Steam Status", icon=Image.open("blocked_icon.png"), menu=menu_items())
