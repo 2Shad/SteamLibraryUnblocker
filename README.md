@@ -12,20 +12,6 @@ The repository is organized as follows:
 - `Linux`: This Folder contains scripts for Linux systems, using the `iptables` command to manage network traffic.
 - `Systray_Application`: This Folder contains a system tray application for controlling the blocking/unblocking scripts in a more user-friendly manner.
 
-## Systray Application
-
-The system tray application provides a graphical interface for users to block/unblock network connections to Steam. The application runs in the system tray and provides menu options to block/unblock connections or exit the application.
-
-A ready-to-use executable of the systray application for Windows systems is available in the [Releases](https://github.com/2Shad/SteamLibraryUnblocker/releases) section of the project repository. Download the .exe file and run it on your machine.
-
-### Usage
-
-1. Run the Systray_Application.exe.
-2. Right-click the system tray icon to open the menu.
-3. Select 'Block' to block Steam network traffic.
-4. Select 'Unblock' to unblock Steam network traffic.
-5. To close the application, select 'Exit'.
-
 ## Windows Scripts
 
 The Windows scripts are named `block_steam_traffic.bat` and `unblock_steam_traffic.bat`. They work with the Advanced Firewall feature built into modern versions of Windows. They add or remove firewall rules which block all incoming and outgoing traffic for the Steam program for all IP addresses except for a specified range.
