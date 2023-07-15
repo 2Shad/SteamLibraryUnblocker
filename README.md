@@ -10,7 +10,6 @@ The repository is organized as follows:
 
 - `Windows`: This Folder contains scripts for Windows systems, using the `netsh` command to manipulate Windows Firewall rules.
 - `Linux`: This Folder contains scripts for Linux systems, using the `iptables` command to manage network traffic.
-- `Systray_Application`: This Folder contains a system tray application for controlling the blocking/unblocking scripts in a more user-friendly manner.
 
 ## Windows Scripts
 
